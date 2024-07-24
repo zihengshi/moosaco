@@ -1,0 +1,38 @@
+This is the TODO tab.
+1. Move all problems to a folder for better organization
+2. Fun problem (Platinum Level)
+- 0 - - -   Given a grid of - and 0, you can click one to flip
+0 0 0 0 -   the one you clicked and also the ones horizontally
+0 0 0 0 0   and vertically touching it ("-" --> "0", "0" --> "-")
+0 0 - 0 -   Please output whether it's possible to turn them all
+            into 0, and if so, how.
+3. Medium level problem - Smart fellow or fart smellow?
+    Given N and a matrix (NxN) of cows, ("." = no cow, "C" = cow, "F" = cow who smells a fart), the fact that farts have certain strength and spread from one cow to the next, please output a matrix similar to the one given, except the F's are all replaced with a number, the maximum strength of the fart for it to be possible that only they have farted, or F if it's not possible. Note that all cows can smell their own fart!
+SAMPLE INPUT 1
+...CFC.
+...CCC.
+SAMPLE OUTPUT 1
+...C0C.
+...CCC.
+
+SAMPLE INPUT 2
+.CFFFF.
+.CCF..C
+SAMPLE OUTPUT 2
+.CFF2F.
+.CCF..C
+
+SAMPLE INPUT 3
+.......
+.F.....
+.....F.
+.......
+.......
+CF.....
+SAMPLE OUTPUT 3
+.......
+.4.....
+.....7.
+.......
+.......
+CF.....

@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0017)http://usaco.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+ <title>USACO</title>
+ <link rel="stylesheet" type="text/css" href="./moosaco_files/usaco.css">
+ <script src="./moosaco_files/jquery.min.js"></script>
+ <script src="./moosaco_files/d3.v3.min.js"></script>
+ <meta http-equiv="EXPIRES" content="0">
+ <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+ <meta http-equiv="PRAGMA" content="NO-CACHE">
+
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+    "HTML-CSS": {
+	scale: 85,
+	preferredFont: "STIX"
+    },
+  tex2jax: {
+    inlineMath: [['$','$'],['\\(','\\)']],
+    processEscapes: true,
+    skipTags: ['pre'],
+    processClass: "mathjax",
+    ignoreClass: "no-mathjax"
+  }
+});
+</script>
+<script type="text/javascript" src="./moosaco_files/MathJax.js"></script>
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body class="no-mathjax" data-new-gr-c-s-check-loaded="14.1068.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+ <div align="center">
+  <div class="shadow1">
+
+   <div class="content">
+
+  
+ <a href="http://usaco.org/index.php"><img src="./moosaco_files/usaco_logo.png" height="130px" border="0px"></a> 
+
+    <div class="navbar" align="left" border="10px">
+     <ul>
+      <li><a href="http://usaco.org/index.php">Overview</a></li> 
+      <li><a href="http://usaco.org/index.php?page=training">Training</a></li>
+      <li><a href="http://usaco.org/index.php?page=contests">Contests</a></li>
+      <li><a href="http://usaco.org/index.php?page=history">History</a></li>
+      <li><a href="http://usaco.org/index.php?page=staff">Staff</a></li>
+      <li><a href="http://usaco.org/index.php?page=resources">Resources</a></li>
+     </ul>
+    </div><br>
+
+   
+    <div style="position:relative; float:left; left:10px; top:-50px; width:550px;">
+
+<div class="panel">
+<h2> 2022 IOI Team Announced </h2>
+
+ <img src="./moosaco_files/ioi_team_2022.jpg" width="100%" border="1px" padding="5px">
+
+ Congratulations to Hankai (Sam) Zhang, Rain Jiang, Benjamin Chen, and Timothy Feng, who
+have been selected to represent the USA at the 2022 International Olympiad in Informatics!
+
+</div>
+
+<div class="panel">
+<h2> 2022 EGOI Team Announced </h2>
+
+ <img src="./moosaco_files/egoi_team_2022.jpg" width="100%" border="1px" padding="5px">
+
+ Congratulations to Claire Zhang, Vivian Han, Luoluo (Christina) Li,
+and Katherine Li, who have been selected to represent the USA at the
+2022 European Girls Olympiad in Informatics!
+
+</div>
+
+<div class="panel">
+<h2> 2021-2022 Finalists Announced </h2>
+
+<p>The USACO is pleased to announce its <a href="http://usaco.org/index.php?page=finalists22">finalists</a> for the 2021-2022
+season, all invited to participate in our training camp in late May /
+early June to compete for selection for the USA teams attending
+the International Olympiad in Informatics and the European Girls
+Olympiad in Informatics. </p>
+
+</div>
+
+<div class="panel">
+
+<h2> Gmail Delivery Issues </h2>
+
+<p> We have been made aware that gmail has recently stopped accepting
+some emails from the USACO server -- e.g., for new accounts and
+password resets.  If this issue is affecting you, please try adding
+usaco@usaco.org to your gmail contacts list.  If you are still having
+issues, please notify the contest director, Brian Dean
+(bcdean@clemson.edu).  If you have recently received an email from
+the USACO server such as a password reset email or an account creation
+email, consider starring it, so that gmail will hopefully treat USACO
+emails with better priority.
+
+</p></div>
+
+<div class="panel">
+
+<h2> Impressive Results at IOI 2021! </h2>
+
+ <img src="./moosaco_files/usa_team_2021.jpg" width="100%" border="1px" padding="5px">
+
+Congratulations to Timothy Feng (gold medal), Siyong Huang (gold medal),
+Rain Jiang (gold medal), and Richard Qi (silver medal), who
+represented the USA at the 2021 International Olympiad in Informatics
+(IOI), hosted by Singapore.
+
+</div>
+
+<div class="panel">
+
+<h2> Impressive Results at EGOI 2021! </h2>
+
+ <img src="./moosaco_files/usa_team_2021_egoi.jpg" width="100%" border="1px" padding="5px">
+
+Congratulations to Rayna Arora (silver medal), Tarushii Goel (silver
+medal), Vivian Han (bronze medal), and Claire Zhang (gold medal), who
+represented the USA at the 2021 European Girls Olympiad in Informatics
+(EGOI), hosted by Switzerland.
+
+</div>
+
+<div class="panel">
+
+<h2> USA Team Participating in EGOI 2021 Announced </h2>
+
+<p>We are thrilled to announce the selection of the team that will be
+representing the USA at the 1st European Girls Olympiad in Informatics
+in mid-June: 
+</p><ul>
+<li>Rayna Arora (James Logan High School, CA), 
+</li><li>Tarushii Goel (Thomas Jefferson HS for Science and Technology, VA), 
+</li><li>Vivian Han (Mission San Jose High School, CA), and 
+</li><li>Claire Zhang (Montgomery Blair High School, MD).
+</li></ul>
+ <p></p>
+
+</div>
+
+<div class="panel">
+
+<h2> Finalists for 2020-2021 Season Announced </h2>
+
+<p>The USACO is pleased to announce its <a href="http://usaco.org/index.php?page=finalists21">finalists</a> for the 2020-2021
+season, who will be participating in our training camp in late May /
+early June and competing for selection for the USA team for the
+International Olympiad in Informatics. </p>
+
+</div>
+
+<div class="panel">
+
+<h2> IOI 2020: 1st Place for Third Year in a Row! </h2>
+
+ <img src="./moosaco_files/usa_team_2020.png" width="100%" border="1px" padding="5px">
+
+ Congratulations to Walden Yan (gold medal), Danny Mittal (silver medal), Xinyang (Alan) Chen (gold medal), and William Lin (gold medal, 1st place individual winner), who represented
+the USA at the 2020 International Olympiad in Informatics.  This is the 3rd year in a row where the USA team has fielded the 1st place individual winner at the IOI.
+
+</div>
+
+<div class="panel">
+
+<h2> Our Mission </h2> 
+
+ The USACO supports computing education in the USA and
+ worldwide by identifying, motivating, and training 
+ high-school computing students at all levels.  We provide:
+
+ <ul>
+
+  <li> Hundreds of hours of free on-line <a href="http://usaco.org/index.php?page=training">training
+  resources</a> that students can use to improve their programming
+  and computational problem-solving skills.</li>
+
+  <li> On-line <a href="http://usaco.org/index.php?page=contests">programming contests</a> (roughly six
+  per year) for students at all levels. </li>
+
+  <li> An intensive summer <a href="http://usaco.org/index.php?page=camp">training camp</a>, to
+  which the top students in the USA are invited to further improve
+  their skills and learn advanced material. </li>
+
+  <li> The opportunity for the top four students in the USA to
+  represent their country at the <a href="http://www.ioinformatics.org/">International
+  Olympiad in Informatics (IOI)</a>, the most prestigious
+  international algorithmic programming competition at the
+  high-school level. </li>
+
+ </ul>
+</div>
+
+<div class="panel">
+
+<h2> First Place at IOI 2019! </h2>
+
+ <img src="./moosaco_files/usa_team_2019.jpg" width="100%" border="1px" padding="5px">
+
+ Congratulations to the USA team attending the 2019 IOI in Baku, Azerbaijan.  From left to right: Eric Zhang (gold), Benjamin Qi (gold, 1st place individual winner), Daniel Zhang (gold), and and William Lin (silver).
+
+</div>
+
+<div class="panel">
+
+<h2> First Place at IOI 2018! </h2>
+
+ <img src="./moosaco_files/usa_team_2018_ioi.jpg" width="100%" border="1px" padding="5px">
+
+ Congratulations to the USA IOI team for a superb showing at the 2018 International Olympiad in Informatics
+in Tsukuba, Japan!  From left to right: Spencer Compton (gold), Eric Zhang (gold), Benjamin Qi (gold, 1st place individual winner), and William Hu (bronze).
+
+</div>
+
+<div class="panel">
+
+<h2> Training Pages Now Support Python </h2>
+
+For those who prefer coding in Python, our training pages now support submission of programs
+written in Python 2.7 or Python 3.6.
+
+</div>
+
+</div>
+
+<div style="position:relative; float:right; right:10px; top:-50px; width:300px;"> 
+ 
+    <div class="panel" style="background-color:#FFF;">
+      <h2> Your Account </h2>
+
+       
+      <div class="inline-block">
+       <form method="POST" action="http://usaco.org/current/tpcm/login-session.php" id="login-form">
+        <div id="login">
+
+	 Not currently logged in.
+         <div class="form_error" style="display: none;">Error!</div>
+
+          <div class="field">
+           <label for="uname">Username:</label>
+            <input name="uname" size="20" type="text"></div>
+          <div class="field">
+            <label for="password">Password:</label>
+            <input name="password" size="20" type="password"> 
+          </div>
+          <div class="forgotpass">
+            <label for="blank"></label>
+            <a href="http://usaco.org/index.php?page=resetpw">Forgot password?</a>
+          </div>
+           <div class="field">
+	   <span>
+          <input type="submit" value="Login">
+          <button type="button" onclick="window.location=&#39;index.php?page=register&#39;">Register for New Account</button>
+	  </span> </div>
+         </div>
+        </form>
+       </div>
+
+        				 
+  </div>
+
+<script>
+
+  $(".form_error").hide()
+	
+  $(":submit").click(function(event)
+  {
+    var f = $(this).closest("form");
+    event.preventDefault();
+    $.post("current/tpcm/login-session.php", f.serialize(), (function(form)
+    {
+	return function(resp)
+        {
+	  $(".form_error", form).hide();
+	  var success = parseInt(resp.code);
+	            if (success) window.location = "index.php";
+	  	  else {
+    	    $(".form_error", form).show();
+	    $(".form_error", form).text(resp.msg);
+	    $(":password", form).val("");
+	  };
+	};
+    })(f), 'json');
+  });
+</script>
+
+    <div class="panel">
+      <h2> 2021-2022 Schedule </h2>
+      Dec 17-20: First Contest <br>
+      Jan 28-31: Second Contest <br>
+      Feb 25-28: Third Contest <br>
+      Mar 25-28: US Open <br>
+      May 26-June 4: Training Camp <br>
+      Aug 7-14: IOI 2022 in Indonesia <br>
+    </div>
+
+
+</div>
+
+<br style="clear:both">
+    <div class="panel sponsors" style="position:relative; float:left; left:10px; top:-50px; width:800px;"> 
+    <h2> Our Sponsors </h2>
+
+<span><a style="text-decoration:none;" href="http://www.citadel.com/"><img src="./moosaco_files/logo_citadel.png" width="500px"></a></span>
+<br>
+<span><a style="text-decoration:none;" href="http://www.twosigma.com/"><img src="./moosaco_files/logo_twosigma_new.png" width="75px"></a></span>
+&nbsp;
+<span><a style="text-decoration:none;" href="http://www.deshaw.com/"><img src="./moosaco_files/logo_deshaw.png" width="150px"></a></span>
+&nbsp;
+<span><a style="text-decoration:none;" href="http://www.ansatzcapital.com/"><img src="./moosaco_files/logo_ansatz.png" width="100px"></a></span>
+&nbsp;
+<span><a style="text-decoration:none;" href="http://x-camp.academy/#/"><img src="./moosaco_files/logo_xcamp.png" width="130px"></a></span>
+&nbsp;
+<span><a style="text-decoration:none;" href="http://easyfuncoding.com/"><img src="./moosaco_files/logo_easyfuncoding.png" width="190px"></a></span>
+&nbsp;
+<span><a style="text-decoration:none;" href="http://www.clemson.edu/"><img src="./moosaco_files/logo_clemson.jpg" width="55px"><br>Clemson University</a></span>
+
+    </div>
+
+  <br style="clear:both">
+
+
+   </div>
+  </div>
+ </div>
+
+ <br style="clear:both">
+
+
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
