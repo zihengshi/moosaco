@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0058)http://www.moosaco.ml/?page=viewproblem2&cpid=1229 -->
+<!-- saved from url=(0058)http://www.zihengshi.github.io/?page=viewproblem2&cpid=1229 -->
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
@@ -157,15 +157,15 @@ img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!importan
    <div class="content">
 
   
- <a href="http://www.moosaco.ml/"><img src="./moosaco_files/usaco_logo.png" height="130px" border="0px"></a> 
+ <a href="http://www.zihengshi.github.io/"><img src="./moosaco_files/usaco_logo.png" height="130px" border="0px"></a> 
 
     <div class="navbar" align="left" border="10px">
      <ul>
-      <li><a href="http://www.moosaco.ml/">Useless</a></li> 
-      <li><a href="http://www.moosaco.ml/">Buttons</a></li>
-      <li><a href="http://www.moosaco.ml/">That I Was</a></li>
-      <li><a href="http://www.moosaco.ml/">Too Lazy To</a></li>
-      <li><a href="http://www.moosaco.ml/">Remove</a></li>
+      <li><a href="http://www.zihengshi.github.io/">Useless</a></li> 
+      <li><a href="http://www.zihengshi.github.io/">Buttons</a></li>
+      <li><a href="http://www.zihengshi.github.io/">That I Was</a></li>
+      <li><a href="http://www.zihengshi.github.io/">Too Lazy To</a></li>
+      <li><a href="http://www.zihengshi.github.io/">Remove</a></li>
      </ul>
     </div><br>
 
@@ -202,7 +202,7 @@ Contest may or may not have ended. We don't know.
 
 <div align="right" style="position:relative; float:right; right:40px; top:-93px; width:350px; z-index:2; padding:0px;">
 
-<form style="padding-top:60px;" action="http://www.moosaco.ml/?page=viewproblem2&amp;cpid=1229"> 
+<form style="padding-top:60px;" action="http://www.zihengshi.github.io/?page=viewproblem2&amp;cpid=1229"> 
 <select name="lang" style="background-color:#eee;" id="choose-language">
 <option value="en" selected="yes">English (en)</option>
 <option value="hy">Armenian (hy)</option>
@@ -250,7 +250,7 @@ LOREM IPSUM
 </p></span></div>
 
     
-		<form class="submission" method="GET" action="http://www.moosaco.ml/s/teaks" enctype="multipart/form-data">
+		<form class="submission" method="GET" action="http://www.zihengshi.github.io/s/teaks" enctype="multipart/form-data">
 		<div id="solution">
 			<input type="hidden" name="cpid" value="1229">
 		
@@ -271,7 +271,7 @@ LOREM IPSUM
 				<input name="sourcefile" size="50" type="file" class="required"></div>
 		
 			<button onclick="alert('submitting...')">Submit Solution</button>
-    <p> Note: All code written in Python3 cannot be understood by the Python 4 Interpretter. Please consider rewriting your code. We have discontinued the useless languages of Python3, Java, C, C++14, and C++17. We are bringing back Pascal soon (Maybe in 3 decades), and replacing removed languages with much more popular languages such as Brainf*ck, TrumpScript, and Whitespace! We also lowered the memory limit for the problems to 4 bytes because the repl we're hosting this on is running out of memory. The time limit is now 0.01 ms because we personally think that people should optimize their code. Also, the maximum size for your code itself is now 8 bytes because we're storing everything on this floppy disk we found somewhere and the code for our website itself is taking up 4 megabytes! (Our logo uses up most of that) We have also gotten rid of the Bronze, Silver, Gold, and Platinum divisions because we don't have enough <a style="text-decoration:line-through;">repls</a> servers to host these competitions. We have replaced them with a single dirt contest every year with problems so easy that you will want to cry because we <a style="text-decoration:line-through;">can't afford to pay Brian Dean to make more problems</a> think it will benifit the community as a whole. We have also changed the input and output for your program to the WalkDeck API. If you need help on using it, click this link: <a href="/WalkDeckHelp" cursor="">https://moosaco.ml/WalkDeckHelp</a></p></div>
+    <p> Note: All code written in Python3 cannot be understood by the Python 4 Interpretter. Please consider rewriting your code. We have discontinued the useless languages of Python3, Java, C, C++14, and C++17. We are bringing back Pascal soon (Maybe in 3 decades), and replacing removed languages with much more popular languages such as Brainf*ck, TrumpScript, and Whitespace! We also lowered the memory limit for the problems to 4 bytes because the repl we're hosting this on is running out of memory. The time limit is now 0.01 ms because we personally think that people should optimize their code. Also, the maximum size for your code itself is now 8 bytes because we're storing everything on this floppy disk we found somewhere and the code for our website itself is taking up 4 megabytes! (Our logo uses up most of that) We have also gotten rid of the Bronze, Silver, Gold, and Platinum divisions because we don't have enough <a style="text-decoration:line-through;">repls</a> servers to host these competitions. We have replaced them with a single dirt contest every year with problems so easy that you will want to cry because we <a style="text-decoration:line-through;">can't afford to pay Brian Dean to make more problems</a> think it will benifit the community as a whole. We have also changed the input and output for your program to the WalkDeck API. If you need help on using it, click this link: <a href="/WalkDeckHelp" cursor="">https://zihengshi.github.io/WalkDeckHelp</a></p></div>
 		</form>
     
 </div>

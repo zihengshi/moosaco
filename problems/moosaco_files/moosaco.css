@@ -3,9 +3,9 @@ body,td,th {
   font-size: 14px;
   color: #000;
 }
-a:link {color: #009; text-decoration: underline; }
-a:active {color: #009; text-decoration: underline; }
-a:visited {color: #009; text-decoration: underline; }
+a:link {color: #409; text-decoration: underline; }
+a:active {color: #409; text-decoration: underline; }
+a:visited {color: #409; text-decoration: underline; }
 body {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -22,7 +22,7 @@ div.main {
 }
 .form_error {
   font-weight: bold;
-  color:#800;
+  color:#c00;
   padding-top:6px;
 }
 .navbar ul {
@@ -34,7 +34,7 @@ div.main {
   display: inline;
   font-variant: small-caps;  
   font-size: 16px;
-  background-color: #139;
+  background-color: #439;
   color: #EEE;
   text-decoration: none;
   margin: 5px 0; 
@@ -46,7 +46,7 @@ div.main {
   padding-bottom: 3px;
 }
 .navbar li a:hover {
-  background-color: #47F;
+  background-color: #67F;
   color:#FFF
 }
 
@@ -73,9 +73,9 @@ div.main {
  text-align: left;
 }
 .panel a:link {color: #000; text-decoration: underline; }
-.panel a:active {color: #009; text-decoration: underline; }
-.panel a:visited {color: #009; text-decoration: underline; }
-.panel a:hover {color: #33F; text-decoration: none; }
+.panel a:active {color: #409; text-decoration: underline; }
+.panel a:visited {color: #409; text-decoration: underline; }
+.panel a:hover {color: #53F; text-decoration: none; }
 .panel h2 {
   font-variant: small-caps;  
   line-height: 25%;
