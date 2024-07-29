@@ -10,7 +10,7 @@
  <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
  <meta http-equiv="PRAGMA" content="NO-CACHE">
 
-<script type="text/x-mathjax-config;executed=true">
+<script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     "HTML-CSS": {
 	scale: 85,
@@ -176,7 +176,7 @@ img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!importan
 <div class="panel">
 
 <h2> MOOSACO 2022 July Contest,  Dirt</h2>
-<h2> Problem 2. Lions </h2>
+<h2> Problem 1. Lions </h2>
  
 </div>
 </div>
@@ -192,7 +192,7 @@ Contest may or may not have ended. We don't know.
 
 
 <div id="last-status" style="padding:10px; position:relative; float:left; left:30px; top:-45px; width:820px; border:1px solid black; background-color:#FFF; " data-response-code="-1" data-sid="-1"> 
-<p style="display:inline;"> <b>Please keep reading.</b></p>
+<p style="display:inline;"> <b>Analysis mode</b></p>
 <div id="trial-information"></div>
 <p style="text-align: left; display: none;" class="mono prewrap output-data"></p>
 </div>
@@ -216,18 +216,18 @@ Contest may or may not have ended. We don't know.
 
 <p>Roar! James the lion is hungry! He sees Bessie the cow and wants to eat her!</p>
 
-<p>Luckily, Bessie finds out before it's too late. Bessie does some calculations and manages to retrieve a list of N (0 ≤ N ≤ 10000) words that James is scared of. Each word consists of only lowercase letters. Words have a maximum length of 8. Sadly however, Bessie has an accent and can only properly pronounce M (0 ≤ M ≤ 26) letters.</p>
-<p>Please find out the maximum amount of words Bessie can pronounce that James is scared of</p>
+<p>Luckily, Bessie finds out before it's too late. Bessie does some calculations and manages to retrieve a list of N (0 ≤ N ≤ 10000) words that James is scared of. Each word consists of only lowercase letters. Words have a maximum length of 8. Unfortunately, Bessie has bad memory and can only remember M (0 ≤ M ≤ 26) letters, so all the words she can say must only use up to M total distinct letters.</p>
+<p>Please find out the maximum amount of words Bessie can pronounce that James is scared of.</p>
 <div class="prob-in-spec">
 
-<h4>INPUT FORMAT (input arrives from the WalkDeck API Packet):</h4>
+<h4>INPUT FORMAT (input arrives from stdin):</h4>
 
 <p>First line contains 2 numbers, N and M.</p>
 
 <p>Next N lines contains the words James is scared of.</p>
 </div>
 
-<p></p><div class="prob-out-spec"><h4>OUTPUT FORMAT (send output to WalkDeck API Request):</h4>
+<p></p><div class="prob-out-spec"><h4>OUTPUT FORMAT (send output to stdout):</h4>
 
 <p>
 Please output the maximum amount of words that Bessie can pronounce, given the amount of letters she can pronounce.
