@@ -1,5 +1,76 @@
-solution coming soon
-but try bitmask
-it might work
-if it doesnt then theres probably no solution
-ill tweak it if so
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MOOSACO Solution: Lions</title>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                "HTML-CSS": {
+                scale: 85,
+                preferredFont: "STIX"
+                },
+            tex2jax: {
+                inlineMath: [['$','$'],['\\(','\\)']],
+                processEscapes: true,
+                skipTags: ['pre'],
+                processClass: "mathjax",
+                ignoreClass: "no-mathjax"
+            }
+            });
+        </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+<body>
+    <h1>MOOSACO Solution: Lions</h1>
+    <p>
+        You can use DP or DFS on bitmasks about the selection of words.
+    </p>
+    <p>
+        Here's a sample solution:
+    </p>
+    <p>    My solution:</p>
+    <pre>
+// Sample solution by Henry Shi
+
+#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int n, k, res;
+string s;
+vector&lt;int&gt; l[25];
+bool visited[50000000];
+
+void dfs(int words, int letters, int num_words) { // words and letters are bitmasks
+    if (visited[words]) return;
+    if (num_words > n) return;
+
+    visited[words] = 1;
+
+    for (int i = 0; i &lt; n; i++) {
+        if (words & (1 &lt;&lt; i)) continue; // it contains this word, so skip
+
+        int new_letters = letters;
+        for (int letter : l[i]) new_letters |= (1 &lt;&lt; letter);
+        if (__builtin_popcount(new_letters) > k) continue;
+
+        dfs(words | (1 &lt;&lt; i), new_letters, num_words + 1);
+    }
+
+    res = max(res, num_words);
+}
+
+int main() {
+    cin >> n >> k;
+    for (int i = 0; i &lt; n; i++) {
+        cin >> s;
+        l[i].resize(s.length());
+        for (int j = 0; j &lt; s.length(); j++) l[i][j] = s[j] - 'a';
+    }
+    dfs(0, 0, 0);
+
+    cout &lt;&lt; res &lt;&lt; endl;
+}
+    </pre>
+</body>
+</html>
